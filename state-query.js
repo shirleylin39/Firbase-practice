@@ -9,7 +9,9 @@ async function queryStatePending(db) {
     return resultArray;
   } else {
     snapshot.forEach(doc => {
-      console.log(doc.id, '=>', doc.data());
+      resultArray.push(doc.id, '=>', doc.data());
+      console.log(resultArray);
+      return resultArray;
     });
   }
 }
@@ -25,7 +27,9 @@ async function queryStateComplete(db) {
     return resultArray;
   } else {
     snapshot.forEach(doc => {
-      console.log(doc.id, '=>', doc.data());
+      resultArray.push(doc.id, '=>', doc.data());
+      console.log(resultArray);
+      return resultArray;
     });
   }
 }
